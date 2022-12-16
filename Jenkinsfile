@@ -35,5 +35,5 @@ stage('Push image') {
 sshagent(['my-ssh-key']) {
     sh 'ssh ubunutu@3.93.162.249 kubectl set image deployments/devopscw2 devopscw2=msnb9/devopscw2:$BUILD_NUMBER'
 }
-}
+
 
