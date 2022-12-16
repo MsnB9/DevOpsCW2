@@ -1,7 +1,7 @@
 node {
     def app
 
-    stage('Testing step') {
+    stage('Clone repositry') {
        /* testing */
         checkout scm
     }
