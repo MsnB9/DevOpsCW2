@@ -31,5 +31,9 @@ stage('Push image') {
             app.push("latest")
         }
     }
+
+sshagent(['my-ssh-key']) {
+    sh 'ssh ubunutu@3.93.162.249 kubectl set image deployments/coursework2 coursework2=msnb9/devopscw2:$BUILD_NUMBER'
+}
 }
 
