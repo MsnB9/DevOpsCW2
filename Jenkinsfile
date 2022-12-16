@@ -13,4 +13,12 @@ node {
 
       app = docker.build("msnb9/devopscw2")
     }
-}
+ stage('Test image') {
+        /* Testing container to be launched from image */
+
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
+    }
+
+
