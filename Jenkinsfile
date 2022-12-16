@@ -5,7 +5,7 @@ node {
        /* testing */
         checkout scm
     }
-}
+
 
  stage('Build image') {
         /* This builds the actual image; synonymous to
@@ -13,3 +13,4 @@ node {
 
         app = docker.build("msnb9/devopscw2")
     }
+}
