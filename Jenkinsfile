@@ -34,7 +34,11 @@ stage('Push image') {
 
 
 sshagent(['my-ssh-key']) {
+<<<<<<< HEAD
     sh 'ssh ubuntu@3.90.207.28 kubectl set image deployments/coursework2 devopscw2=msnb9/devopscw2:$BUILD_NUMBER'
+=======
+    sh 'ssh ubuntu@3.90.207.28 kubectl set image deployments/coursework2 coursework2=msnb9/coursework2:$BUILD_NUMBER'
+>>>>>>> c763f6344c2aa8dda863ddd84b030c11f73d852a
 }
 }
 
